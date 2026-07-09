@@ -7,6 +7,7 @@ int main (string[] args) {
     Test.init (ref args);
 
     ValaFoundation.Testcases.register_test_suite<AppTests.ExampleTest> ();
+    ValaFoundation.Testcases.register_test_suite<AppTests.FinderTest> ();
 
 
     return Test.run ();

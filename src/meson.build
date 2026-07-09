@@ -1,4 +1,7 @@
-finder_sources = files('library.vala')
+finder_sources = files(
+  'info.vala',
+  'finder.vala',
+)
 
 finder_deps = [
   dependency('glib-2.0'),
