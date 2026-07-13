@@ -11,6 +11,7 @@ Small Vala library for file and directory discovery with glob filters, exclusion
 - [Hashing helpers](#hashing-helpers)
 - [Release artifacts](#release-artifacts)
 - [Use generated library in other projects](#use-generated-library-in-other-projects)
+- [Install via Vamposer](#install-via-vamposer)
 - [Dependencies](#dependencies)
 - [License](#license)
 
@@ -156,6 +157,37 @@ curl -sSfL https://raw.githubusercontent.com/ValaFoundation/finder/master/init-l
 ```
 
 This helper downloads release artifacts (or builds from source) and prepares local `vapi/`, `lib/`, and `include/` folders plus reusable Meson variables.
+
+## Install via [Vamposer](https://github.com/ValaFoundation/vamposer)
+
+In your consumer project root:
+
+```sh
+vamposer require ValaFoundation/finder master
+vamposer install
+```
+
+Then include generated Vamposer dependencies in your `meson.build`:
+
+```meson
+subdir('vamposer')
+
+executable('my-app',
+	sources,
+	dependencies: [
+		vamposer_deps
+	]
+)
+```
+
+You can also use a fixed tag or commit instead of `master`.
+
+If you also want the test workspace, install it as a development dependency:
+
+```sh
+vamposer require --dev ValaFoundation/testcases master
+vamposer install --dev
+```
 
 ## Test coverage
 
