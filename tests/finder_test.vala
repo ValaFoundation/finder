@@ -1,7 +1,7 @@
 namespace AppTests {
     using GLib;
-    using ValaFoundation.Finder;
-    using ValaFoundation.Testcases;
+    using ValaTux.Finder;
+    using ValaTux.Testcases;
 
     public class FinderTest : BaseTest {
         construct {

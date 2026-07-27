@@ -1,7 +1,7 @@
 using Gee;
 using GLib;
 
-namespace ValaFoundation.Finder {
+namespace ValaTux.Finder {
     private static uint string_hash (string key) {
         return str_hash (key);
     }

@@ -37,7 +37,7 @@ make tests
 
 ## What it does
 
-Namespace: `ValaFoundation.Finder`
+Namespace: `ValaTux.Finder`
 
 - Recursively or non-recursively scan directories.
 - Filter results by glob patterns (`*.vala`, `*.txt`, etc.).
@@ -58,7 +58,7 @@ Namespace: `ValaFoundation.Finder`
 ### Find files recursively
 
 ```vala
-using ValaFoundation.Finder;
+using ValaTux.Finder;
 
 var files = FindFiles ({"*.vala"})
 	.In ({"src"})
@@ -138,7 +138,7 @@ In consumer project root:
 Or run directly from GitHub:
 
 ```sh
-curl -sSfL https://raw.githubusercontent.com/ValaFoundation/finder/master/init.sh -o init.sh && chmod +x init.sh && ./init.sh && rm init.sh
+curl -sSfL https://raw.githubusercontent.com/ValaTux/finder/master/init.sh -o init.sh && chmod +x init.sh && ./init.sh && rm init.sh
 ```
 
 Then in your consumer `meson.build`:
@@ -153,17 +153,17 @@ executable('app', 'main.vala', dependencies: [finder_dep])
 In consumer project root:
 
 ```sh
-curl -sSfL https://raw.githubusercontent.com/ValaFoundation/finder/master/init-local-vapi.sh | bash
+curl -sSfL https://raw.githubusercontent.com/ValaTux/finder/master/init-local-vapi.sh | bash
 ```
 
 This helper downloads release artifacts (or builds from source) and prepares local `vapi/`, `lib/`, and `include/` folders plus reusable Meson variables.
 
-## Install via [Vamposer](https://github.com/ValaFoundation/vamposer)
+## Install via [Vamposer](https://github.com/ValaTux/vamposer)
 
 In your consumer project root:
 
 ```sh
-vamposer require ValaFoundation/finder master
+vamposer require ValaTux/finder master
 vamposer install
 ```
 
@@ -185,7 +185,7 @@ You can also use a fixed tag or commit instead of `master`.
 If you also want the test workspace, install it as a development dependency:
 
 ```sh
-vamposer require --dev ValaFoundation/testcases master
+vamposer require --dev ValaTux/testcases master
 vamposer install --dev
 ```
 

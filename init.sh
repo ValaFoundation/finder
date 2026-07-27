@@ -8,7 +8,7 @@ NC='\033[0m'
 
 PROJECT_SLUG="finder"
 DEPENDENCY_NAME="finder"
-REPO_URL="https://github.com/ValaFoundation/finder.git"
+REPO_URL="https://github.com/ValaTux/finder.git"
 REPO_REF="master"
 
 echo -e "${BLUE}==> Initializing ${PROJECT_SLUG} dependency...${NC}"

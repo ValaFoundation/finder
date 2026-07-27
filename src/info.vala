@@ -1,6 +1,6 @@
 using GLib;
 
-namespace ValaFoundation.Finder {
+namespace ValaTux.Finder {
     public class Info : Object {
         public string path;
         public FileInfo file_info;
